@@ -10,7 +10,7 @@
 
 '''
 This code creates the MiniImagenet dataset. Following the partitions given
-by Sachin Ravi and Hugo Larochelle in 
+by Sachin Ravi and Hugo Larochelle in
 https://github.com/twitter/meta-learning-lstm/tree/master/data/miniImagenet
 '''
 
@@ -21,8 +21,8 @@ import glob, os
 import cv2
 from tqdm import tqdm
 
-pathImageNet = '/home/aberenguel/Dataset/Imagenet/ILSVRC2012_img_train'
-pathminiImageNet = '/home/aberenguel/Dataset/miniImagenet/'
+pathImageNet = '/home/mi/imagenet/ILSVRC2012_img_train'
+pathminiImageNet = '../dataset/miniImagenet/'
 pathImages = os.path.join(pathminiImageNet,'images/')
 filesCSVSachinRavi = [os.path.join(pathminiImageNet,'train.csv'),
                       os.path.join(pathminiImageNet,'val.csv'),
@@ -65,7 +65,3 @@ for filename in filesCSVSachinRavi:
                 cv2.imwrite(os.path.join(pathImages, images[c][i]),im_resized)
 
                 #copyfile(os.path.join(pathImageNet,lst_files[selected_images[i]]),os.path.join(pathImages, images[c][i]))
-
-
-
-
